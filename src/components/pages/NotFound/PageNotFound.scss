@@ -1,7 +1,13 @@
+@use "../../../globalStyleVariables";
+
 .pageNotFoundContent{
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  height: 70vh;
+  @media screen and (max-width: globalStyleVariables.$large ){
+    padding: 1rem;
+  }
 }
