@@ -8,8 +8,12 @@
   flex-wrap: nowrap;
   text-align: center;
   min-height: 70vh;
-
   @media screen and (max-width: globalStyleVariables.$large ){
     padding: 1rem;
+  }
+
+  .notFoundIcon{
+    width: 3em;
+    height: auto;
   }
 }
