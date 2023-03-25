@@ -1,12 +1,12 @@
 import React from "react";
 import PageNotFound from "../PageNotFound";
-import { render, screen } from "../../../../tests/testUtils";
-import { fireEvent } from "@testing-library/react";
-import { useNavigate } from "react-router-dom";
+import { render, screen, fireEvent } from "../../../../tests/testUtils";
+
+const mockedUseNavigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
-  useNavigate: () => (jest.fn())
+  useNavigate: () => mockedUseNavigate
 }));
 
 describe("PageNotFound Tests", () => {
@@ -19,12 +19,13 @@ describe("PageNotFound Tests", () => {
     expect(screen.getByTestId("navigateHomeBtn")).toBeInTheDocument();
   });
 
-  test('Pressing home button should redirect home', () =>{
+  test("pressing home button should redirect home", () =>{
     render(<PageNotFound />, { initialRoutes: ["/wrongPath"] });
 
     const mainPageBtn = screen.getByTestId("navigateHomeBtn");
 
     fireEvent.click(mainPageBtn);
-    expect(useNavigate.toHaveBeenCalledWith(""));
+    expect(mockedUseNavigate).toHaveBeenCalled();
+    expect(mockedUseNavigate).toHaveBeenCalledWith("/home");
   });
 });
