@@ -7,18 +7,18 @@ import { ThemeProvider } from "@mui/material/styles";
 import App from "../App";
 import { theme } from "../theme";
 
-const AllProviders = ({ initialRoute }) => {
+const AllProviders = ({ route }) => {
   return (
     <ThemeProvider theme={theme}>
-      <MemoryRouter initialEntries={[initialRoute]}>
+      <MemoryRouter initialEntries={[route]}>
         <App />
       </MemoryRouter>
     </ThemeProvider>
   );
 };
 
-const customRender = ({ initialRoute }) => {
-  return testingLibrary.render(<AllProviders initialRoute={initialRoute} />);
+const customRender = ({ route }) => {
+  return testingLibrary.render(<AllProviders route={route} />);
 };
 
 module.exports = {

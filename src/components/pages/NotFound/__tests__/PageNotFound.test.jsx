@@ -9,7 +9,7 @@ jest.mock("react-router-dom", () => ({
 
 describe("PageNotFound Tests", () => {
   test("should render", () => {
-    render({ initialRoute: "/wrongPath" });
+    render({ route: "/wrongPath" });
 
     expect(screen.getByText("404 - Page not found")).toBeInTheDocument();
     expect(
@@ -19,7 +19,7 @@ describe("PageNotFound Tests", () => {
   });
 
   test("pressing home button should redirect home", () => {
-    render({ initialRoute: "/wrongPath" });
+    render({ route: "/wrongPath" });
 
     const mainPageBtn = screen.getByTestId("navigateHomeBtn");
 
