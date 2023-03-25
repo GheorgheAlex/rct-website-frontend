@@ -4,11 +4,9 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import strings from "../../config/strings";
 import "./Header.scss";
 import AudioPlayer from "react-h5-audio-player";
 
-const { general: generalStrings } = strings;
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);

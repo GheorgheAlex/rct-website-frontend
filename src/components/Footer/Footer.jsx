@@ -1,8 +1,5 @@
 import React from "react";
-import strings from "../../config/strings";
 import "./Footer.scss";
-
-const { general: generalStrings } = strings;
 
 const Footer = () => {
   return (

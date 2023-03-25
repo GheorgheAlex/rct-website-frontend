@@ -2,9 +2,6 @@ import React from "react";
 import "./LanguageBar.scss";
 import ROFlag from "../../utils/flag-ro.png";
 import UKFlag from "../../utils/flag-uk.png";
-import strings from "../../config/strings";
-
-const { general: generalStrings } = strings;
 
 const LanguageBar = () => {
   const handleROFlagClick = () => {
