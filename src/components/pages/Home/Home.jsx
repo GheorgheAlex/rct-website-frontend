@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>{homepageStrings.title}</title>
+        <title>Acasă</title>
       </Helmet>
       <HomePageContent />
     </>
