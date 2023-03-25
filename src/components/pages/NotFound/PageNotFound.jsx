@@ -14,12 +14,13 @@ const PageNotFound = () => {
       </Helmet>
       <div className="pageNotFoundContent">
         <SearchOffIcon className='notFoundIcon'/>
-        <h1>404 - Not Found</h1>
+        <h1>404 - Page not found</h1>
         <h1>Se pare că pagina nu a fost găsită.</h1>
           <Button
               variant="contained"
               color="secondary"
               className="menu-button"
+              data-testid="navigateHomeBtn"
               onClick={() => {
                   navigate("/home");
               }}>
