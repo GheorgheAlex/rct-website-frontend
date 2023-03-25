@@ -1,5 +1,6 @@
 import React from "react";
 import * as testingLibrary from "@testing-library/react";
+import "@testing-library/jest-dom";
 import { userEvent } from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
