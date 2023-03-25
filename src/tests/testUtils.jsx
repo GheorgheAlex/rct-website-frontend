@@ -1,32 +1,24 @@
 import React from "react";
 import * as testingLibrary from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { userEvent } from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import { HelmetProvider } from "react-helmet-async";
 import App from "../App";
 import { theme } from "../theme";
 
-const AllProviders = ({ children, initialRoutes }) => {
+const AllProviders = ({ initialRoute }) => {
   return (
     <ThemeProvider theme={theme}>
-      <MemoryRouter initialEntries={initialRoutes}>
-        <HelmetProvider>
-          <App />
-          {children}
-        </HelmetProvider>
+      <MemoryRouter initialEntries={[initialRoute]}>
+        <App />
       </MemoryRouter>
     </ThemeProvider>
   );
 };
 
-const customRender = (ui, { initialRoutes }) => {
-  return testingLibrary.render(ui, {
-    wrapper: function Wrapper() {
-      return <AllProviders initialRoutes={initialRoutes} />;
-    },
-  });
+const customRender = ({ initialRoute }) => {
+  return testingLibrary.render(<AllProviders initialRoute={initialRoute} />);
 };
 
 module.exports = {
