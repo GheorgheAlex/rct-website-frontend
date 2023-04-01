@@ -5,18 +5,19 @@ import { useNavigate } from "react-router-dom";
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import Button from "@mui/material/Button";
 import { routerPaths } from "../../../utils/routerPaths";
+import { strings } from "../../../utils/strings";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
   return (
     <>
       <Helmet>
-        <title>404 Page not found</title>
+        <title>{strings.pageNotFound.helmetTitle}</title>
       </Helmet>
       <div className="pageNotFoundContent">
         <SearchOffIcon className='notFoundIcon'/>
-        <h1>404 - Page not found</h1>
-        <h1>Se pare că pagina nu a fost găsită.</h1>
+        <h1>{strings.pageNotFound.pageContent.title}</h1>
+        <h1>{strings.pageNotFound.pageContent.errorMessage}</h1>
           <Button
               variant="contained"
               color="secondary"
@@ -25,7 +26,7 @@ const PageNotFound = () => {
               onClick={() => {
                   navigate(routerPaths.home);
               }}>
-              Pagina principală
+            {strings.pageNotFound.pageContent.mainPageBtn}
           </Button>
       </div>
     </>
