@@ -6,6 +6,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import "./Header.scss";
 import AudioPlayer from "react-h5-audio-player";
+import { strings } from "../../utils/strings";
 
 
 const Header = () => {
@@ -43,35 +44,35 @@ const Header = () => {
               color="secondary"
               className="menu-button"
             >
-              Acasă
+              {strings.header.menuItems.homeButton}
             </Button>
             <Button
               variant="contained"
               color="secondary"
               className="menu-button"
             >
-              Blog
+              {strings.header.menuItems.blogButton}
             </Button>
             <Button
               variant="contained"
               color="secondary"
               className="menu-button"
             >
-              Program emisiuni
+              {strings.header.menuItems.scheduleButton}
             </Button>
             <Button
               variant="contained"
               color="secondary"
               className="menu-button"
             >
-              Contact
+              {strings.header.menuItems.contactButton}
             </Button>
             <Button
               variant="contained"
               color="secondary"
               className="menu-button"
             >
-              Despre noi
+              {strings.header.menuItems.aboutUsButton}
             </Button>
           </div>
 
@@ -101,7 +102,7 @@ const Header = () => {
                 console.log("Here we will navigate");
               }}
             >
-              Acasă
+              {strings.header.menuItems.homeButton}
             </MenuItem>
             <MenuItem
               onClick={(e) => {
@@ -109,7 +110,7 @@ const Header = () => {
                 console.log("Here we will navigate");
               }}
             >
-              Blog
+              {strings.header.menuItems.blogButton}
             </MenuItem>
             <MenuItem
               onClick={(e) => {
@@ -117,7 +118,7 @@ const Header = () => {
                 console.log("Here we will navigate");
               }}
             >
-              Program emisiuni
+              {strings.header.menuItems.scheduleButton}
             </MenuItem>
             <MenuItem
               onClick={(e) => {
@@ -125,7 +126,7 @@ const Header = () => {
                 console.log("Here we will navigate");
               }}
             >
-              Contact
+              {strings.header.menuItems.contactButton}
             </MenuItem>
             <MenuItem
               onClick={(e) => {
@@ -133,7 +134,7 @@ const Header = () => {
                 console.log("Here we will navigate");
               }}
             >
-              Despre noi
+              {strings.header.menuItems.aboutUsButton}
             </MenuItem>
           </Menu>
         </div>
