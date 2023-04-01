@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../utils/rct-logo.png";
+import Logo from "../../assets/rct-logo.png";
 import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";

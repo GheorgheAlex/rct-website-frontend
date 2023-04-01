@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { routerPaths } from "../utils/routerPaths";
 
 const WebRedirect = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/home");
+    navigate(routerPaths.home);
   }, [navigate]);
   return <></>;
 };
