@@ -4,7 +4,7 @@ import "./PageNotFound.scss";
 import { useNavigate } from "react-router-dom";
 import SearchOffIcon from '@mui/icons-material/SearchOff';
 import Button from "@mui/material/Button";
-import { paths } from "../../../utils/paths";
+import { routerPaths } from "../../../utils/routerPaths";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const PageNotFound = () => {
               className="menu-button"
               data-testid="navigateHomeBtn"
               onClick={() => {
-                  navigate(paths.home);
+                  navigate(routerPaths.home);
               }}>
               Pagina principală
           </Button>
