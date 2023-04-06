@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "noImplicitAny": false,
+    "target": "ES2019",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "inlineSources": true,
+    "allowJs": false,
+    "paths": {
+      "react-testing-library": [
+        "./tests/react-testing-library"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

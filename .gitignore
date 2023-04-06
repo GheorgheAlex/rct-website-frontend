@@ -22,13 +22,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.cache
-package-lock.json
+.idea
 dist
 jest-cache
-
-.idea
+ts-cache
+coverage
 junit.xml
+
+.cache
 .jest-test-results.json
 
 
