@@ -21,6 +21,7 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "sass": "^1.56.1",
+    "typescript": "^5.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -52,7 +53,6 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.21.4",
     "babel-jest": "^29.5.0",
-    "jest-css-modules": "^2.1.0",
-    "typescript": "^5.0.3"
+    "jest-css-modules": "^2.1.0"
   }
 }

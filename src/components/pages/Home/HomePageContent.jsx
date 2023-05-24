@@ -9,7 +9,7 @@ import AudioPlayer from "react-h5-audio-player";
 const HomePageContent = () => {
   return (
     <>
-      <AudioPlayer
+      {/* <AudioPlayer
         autoPlay={false}
         src="http://rct.unitbv.ro:8000/;?type=http&nocache=38687"
         showSkipControls={false}
@@ -19,7 +19,7 @@ const HomePageContent = () => {
         className="audioPlayer-content"
         layout={"horizontal"}
         // other props here
-      />
+      /> */}
       <div className="content"></div>
     </>
   );

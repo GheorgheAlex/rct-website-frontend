@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import "./Header.scss";
-import AudioPlayer from "react-h5-audio-player";
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
 import { strings } from "../../utils/strings";
 
 
@@ -25,7 +25,7 @@ const Header = () => {
       <div className="header">
         <img src={Logo} className="logoImage" alt="Website logo" />
         <div>
-          <AudioPlayer
+          {/* <AudioPlayer
             autoPlay={false}
             src="http://rct.unitbv.ro:8000/;?type=http&nocache=38687"
             showSkipControls={false}
@@ -34,7 +34,8 @@ const Header = () => {
             loop={false}
             className="audioPlayer-header"
             layout={"horizontal"}
-          />
+          /> */}
+          <AudioPlayer/>
         </div>
 
         <div className="menu-left-side">
