@@ -1,0 +1,33 @@
+.article-preview-container{
+    height: 200px;
+    width: 500px;
+    border: 1px;
+    border-color: black;
+    border-radius: 10px;
+    border-style: solid;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+}
+
+.article-preview-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-thumbnail{
+    margin: 10px;
+}
+
+.article-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-description{
+    display: flex;
+}
+

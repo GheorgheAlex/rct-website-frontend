@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import WebRedirect from "./components/WebRedirect";
 import PageNotFound from "./components/pages/NotFound/PageNotFound";
 import { routerPaths } from "./utils/routerPaths";
+import Blog from './components/pages/Blog/Blog';
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
         <Route path="/*" element={<PageNotFound />} />
         <Route path="/" element={<WebRedirect />} />
         <Route path={routerPaths.home} element={<Home />} />
+        <Route path={routerPaths.blog} element={<Blog />} />
+
       </Routes>
     </HelmetProvider>
   );

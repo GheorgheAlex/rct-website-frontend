@@ -7,11 +7,15 @@ import MenuItem from "@mui/material/MenuItem";
 import "./Header.scss";
 import AudioPlayer from "react-h5-audio-player";
 import { strings } from "../../utils/strings";
+import { useNavigate } from "react-router";
+import { routerPaths } from "../../utils/routerPaths";
+
 
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const navigate = useNavigate();
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -50,6 +54,7 @@ const Header = () => {
               variant="contained"
               color="secondary"
               className="menu-button"
+              onClick={()=>navigate(routerPaths.blog)}
             >
               {strings.header.menuItems.blogButton}
             </Button>
