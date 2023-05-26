@@ -1,18 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import BlogContent from "./BlogContent";
+import { strings } from "../../../utils/strings.js"
 
 const Blog = () => {
-    return ( 
+    return (
         <>
             <Helmet>
-                <title>Blog</title>
+                <title>{strings.blog.helmetTitle}</title>
             </Helmet>
             <BlogContent />
         </>
-     );
+    );
 }
- 
+
 export default Blog;
 
 

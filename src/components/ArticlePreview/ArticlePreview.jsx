@@ -1,8 +1,9 @@
 import "./ArticlePreview.scss"
 import { Button } from "@mui/material"
+import { strings } from "../../utils/strings.js"
 import PropTypes from 'prop-types';
 
-const ArticlePreview = ({ articleTitle, articleDescription, articleCategory, articleAuthor }) => {
+const ArticlePreview = ({ articleTitle, articleThumbnail, articleDescription, articleCategory, articleAuthor }) => {
 
     const handleNavigateToArticle = () => {
         console.log("I will jump to article");
@@ -15,7 +16,7 @@ const ArticlePreview = ({ articleTitle, articleDescription, articleCategory, art
     return (
         <div className="article-preview-container">
             <div className="article-thumbnail">
-                <img src="https://picsum.photos/150/200" onClick={handleNavigateToArticle} />
+                <img src={articleThumbnail} onClick={handleNavigateToArticle} />
             </div>
             <div className="article-preview-content">
                 <div className="article-header">
@@ -35,16 +36,18 @@ const ArticlePreview = ({ articleTitle, articleDescription, articleCategory, art
 
 ArticlePreview.propTypes = {
     articleTitle: PropTypes.string,
+    articleThumbnail: PropTypes.string,
     articleAuthor: PropTypes.string,
     articleDescription: PropTypes.string,
     articleCategory: PropTypes.string,
 }
 
 ArticlePreview.defaultProps = {
-    articleTitle: "Prop Article Title",
-    articleAuthor: "Prop Author",
-    articleDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    articleCategory: "Prop category",
+    articleTitle: strings.blog.articlePreviewComp.defaultTitleProp,
+    articleThumbnail: strings.blog.articlePreviewComp.defaultArticleThumbnailProp,
+    articleAuthor: strings.blog.articlePreviewComp.defaultArticleAuthorProp,
+    articleDescription: strings.blog.articlePreviewComp.defaultArticleDescriptionProp,
+    articleCategory: strings.blog.articlePreviewComp.defaultArticleCategoryProp,
 }
 
 export default ArticlePreview;
