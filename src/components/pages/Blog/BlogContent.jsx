@@ -9,6 +9,15 @@ const BlogContent = () => {
       </div>
       <div className="blog-articles-container">
         <ArticlePreview />
+        <ArticlePreview />
+        <ArticlePreview />
+        <ArticlePreview />
+        <ArticlePreview />
+        <ArticlePreview />
+        <ArticlePreview />
+        <ArticlePreview />
+
+
       </div>
     </div>
   );
